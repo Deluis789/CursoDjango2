@@ -1,0 +1,22 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'title' %} Contactos {% endblock  %}
+
+{% block 'content' %}
+<form action="{% url 'contacto' %}" class="search" method="GET">
+    <input type="text" name="search" class="search-bar" placeholder="Buscar contacto....">
+    <input type="submit" class="search-btn" value="Buscar">
+</form>
+<span class="aux-btn"><a href="{% url 'contacto' %}">Ver todos</a> <a href="#">Crear</a></span>
+<ul class="list">
+    {% for contactos in contacto %}
+    <li>{{ contactos }}
+        <span>
+        <a href="#" class="btn btn-detail">Ver</a>
+        <a href="#" class="btn btn-edit">Editar</a>
+        <a href="#" class="btn btn-delete">Borrar</a>
+        </span>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock  %}

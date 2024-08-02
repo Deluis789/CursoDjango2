@@ -1,0 +1,137 @@
+:root{
+    --color-primario: #2ea3f2;
+    --color-secundario: #025a35;
+    --color-texto: #666;
+    --font-main: Nexa;
+    --font-text: Moderniz;
+}
+/* Main settings */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-text);
+    color: var(--color-texto);
+}
+@font-face {
+    font-family: Nexa;
+    src: url('../fonts/Nexa-Heavy.ttf');
+}
+@font-face {
+    font-family: Moderniz;
+    src: url('../fonts/Moderniz.otf');
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-main);
+}
+/* --------------Layout settings---------------- */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    background-color: var(--color-primario);
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    /* text-transform: uppercase; */
+    font-family: var(--font-text);
+    margin: 25px;
+}
+nav ul li a:hover {
+    color: var(--color-texto);
+}
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 50px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-texto);
+    width: 50%;
+    list-style-type: none;
+}
+.list li {
+    padding: 15px;
+    width: 100%;
+    border-bottom: 1px solid var(--color-texto);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn {
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-detail {
+    background-color: var(--color-primario);
+    color: #fff;
+}
+.btn-detail:hover {
+    background-color: rgba(15, 4, 105, 0.822);
+    color: #fff;
+}
+.btn-edit {
+    background-color: #e9e627;
+    color: white;
+}
+.btn-edit:hover {
+    background-color: #e49e09;
+    color: white;
+}
+.btn-delete {
+    background-color: rgb(206, 53, 53);
+    color: white;
+}
+.btn-delete:hover {
+    background-color: rgba(119, 5, 5, 0.932);
+    color: white;
+}
+.search {
+    margin: 20px;
+    width: 50%;
+}
+.search-bar {
+    padding: 10px;
+    width: 80%;
+}
+.search-btn{
+    width: 18%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2ea3f2;
+    color: #fff;
+    outline: none;
+    border: 0;
+    box-shadow: 0;
+    cursor:pointer
+}
+.search-btn:hover{
+    background-color: #fff;
+    color: var(--color-primario);
+}
+.aux-btn{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+.aux-btn a {
+    padding-right: 10px;
+}
